@@ -7,7 +7,6 @@ const Layout = () => {
     <div className="">
       <Navbar />
       <Home />
-      <div className=" h-[100vh]">ss</div>
     </div>
   );
 };
