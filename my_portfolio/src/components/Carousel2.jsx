@@ -41,21 +41,21 @@ const Carousel2 = () => {
           <img
             src={img1}
             alt=""
-            className=" rounded-tl-[60px] rounded-br-[60px]"
+            className=" lg:rounded-tl-[60px] lg:rounded-br-[60px]"
           />
         </div>
         <div className="w-full h-full rounded-lg">
           <img
             src={img2}
             alt=""
-            className=" rounded-tl-[60px] rounded-br-[60px]"
+            className=" lg:rounded-tl-[60px] lg:rounded-br-[60px]"
           />
         </div>
         <div className="w-full h-full rounded-lg">
           <img
             src={img3}
             alt=""
-            className=" rounded-tl-[60px] rounded-br-[60px]"
+            className=" lg:rounded-tl-[60px] lg:rounded-br-[60px]"
           />
         </div>
       </Carousel>

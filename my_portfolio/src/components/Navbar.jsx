@@ -6,10 +6,10 @@ import { motion } from "framer-motion";
 const Navbar = () => {
   const links = [
     {
-      link: "ABOUT",
+      link: "ABOUT ME",
     },
     {
-      link: "SERVICES",
+      link: "MY SERVICES",
     },
     {
       link: "MY WORKS",
@@ -19,17 +19,25 @@ const Navbar = () => {
   const [menu, setMenu] = useState(false);
   return (
     <>
-      <div className="hidden lg:flex fixed px-32 w-full z-10 bg-inherit text-indigo-100 items-center lg:justify-between justify-center gap-5 h-[100px]">
+      <motion.div
+        initial={{ width: "40%" }}
+        animate={{ width: "80%" }}
+        transition={{
+          duration: 1,
+        }}
+        className="main-nav hidden lg:flex fixed px-14 top-3 w-3/4 left-1/2 -translate-x-1/2 mx-auto bg-indigo-100 bg-opacity-10 z-10 rounded-full text-indigo-100 items-center lg:justify-between justify-center gap-5 h-[55px]"
+      >
         <div className=" text-3xl font-bold cursor-pointer">
           <Link to={"/"}>KBM</Link>
         </div>
         <div className=" ">
           <ul className=" flex justify-between items-center gap-24">
-            {links.map((item) => (
+            {links.map((item, key) => (
               <motion.li
+                key={key}
                 whileHover={{ scale: 1.1, originY: 1 }}
                 transition={{ type: "spring", stiffness: 1000 }}
-                className=" font-semibold"
+                className=" font-extrabold"
               >
                 <Link to={`/${item.link}`}>{item.link}</Link>
               </motion.li>
@@ -40,14 +48,14 @@ const Navbar = () => {
           <motion.button
             whileHover={{ scale: 1.04, originY: 1 }}
             transition={{ type: "spring", stiffness: 1000 }}
-            className="bg-[#8D7AFF] shadow-lg   px-4 py-2 rounded-xl font-semibold "
+            className="bg-[#8D7AFF] shadow-lg   px-4 py-1 rounded-xl font-semibold "
           >
             <Link to={"/"}>Let's talk</Link>
           </motion.button>
         </div>
-      </div>
+      </motion.div>
 
-      <div className=" lg:hidden absolute top-5 z-[100] text-white text-2xl flex items-center justify-between w-full px-10">
+      <div className=" lg:hidden absolute top-5 z-[100] text-white text-2xl flex items-center justify-between w-screen px-10">
         <div className=" text-3xl font-bold cursor-pointer">
           <Link to={"/"}>KBM</Link>
         </div>
@@ -61,8 +69,8 @@ const Navbar = () => {
       >
         <div className=" ">
           <ul className=" flex flex-col justify-between items-center gap-5">
-            {links.map((item) => (
-              <li className=" font-semibold">
+            {links.map((item, key) => (
+              <li key={key} className=" font-semibold">
                 <Link to={`/${item.link}`}>{item.link}</Link>
               </li>
             ))}
