@@ -6,13 +6,16 @@ import { motion } from "framer-motion";
 const Navbar = () => {
   const links = [
     {
-      link: "HOME",
+      link: "home",
+      name: "HOME",
     },
     {
-      link: "ABOUT ME",
+      link: "about",
+      name: "ABOUT ME",
     },
     {
-      link: "PROJECTS",
+      link: "projects",
+      name: "PROJECT",
     },
   ];
 
@@ -28,7 +31,7 @@ const Navbar = () => {
         className="main-nav hidden lg:flex fixed px-14 top-3 w-3/4 left-1/2 -translate-x-1/2 mx-auto bg-indigo-100 bg-opacity-10 z-10 rounded-full text-indigo-100 items-center lg:justify-between justify-center gap-5 h-[55px]"
       >
         <div className=" text-3xl font-bold cursor-pointer">
-          <Link to={"/"}>KBM</Link>
+          <Link to={"home"}>KBM</Link>
         </div>
         <div className=" ">
           <ul className=" flex justify-between items-center gap-24">
@@ -39,7 +42,7 @@ const Navbar = () => {
                 transition={{ type: "spring", stiffness: 1000 }}
                 className=" font-extrabold"
               >
-                <Link to={`/${item.link}`}>{item.link}</Link>
+                <Link to={`/${item.link}`}>{item.name}</Link>
               </motion.li>
             ))}
           </ul>
@@ -48,16 +51,16 @@ const Navbar = () => {
           <motion.button
             whileHover={{ scale: 1.04, originY: 1 }}
             transition={{ type: "spring", stiffness: 1000 }}
-            className="bg-[#8D7AFF] shadow-lg   px-4 py-1 rounded-xl font-semibold "
+            className="bg-[#8D7AFF] shadow-lg   px-4 py-1 rounded-full font-semibold "
           >
-            <Link to={"/"}>Let's talk</Link>
+            <Link to={"contact"}>Let's talk</Link>
           </motion.button>
         </div>
       </motion.div>
 
       <div className=" lg:hidden absolute top-5 z-[100] text-white text-2xl flex items-center justify-between w-screen px-10">
         <div className=" text-3xl font-bold cursor-pointer">
-          <Link to={"/"}>KBM</Link>
+          <Link to={"home"}>KBM</Link>
         </div>
         <FaBurger className="" onClick={() => setMenu(!menu)} />
       </div>
@@ -71,14 +74,14 @@ const Navbar = () => {
           <ul className=" flex flex-col justify-between items-center gap-5">
             {links.map((item, key) => (
               <li key={key} className=" font-semibold">
-                <Link to={`/${item.link}`}>{item.link}</Link>
+                <Link to={`/${item.link}`}>{item.name}</Link>
               </li>
             ))}
           </ul>
         </div>
         <div>
           <button className="bg-[#8D7AFF] px-3 py-1 rounded-xl font-semibold ">
-            <Link to={"/"}>Let's talk</Link>
+            <Link to={"/contact"}>Let's talk</Link>
           </button>
         </div>
       </div>
