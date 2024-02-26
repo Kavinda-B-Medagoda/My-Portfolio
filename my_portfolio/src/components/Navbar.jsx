@@ -6,13 +6,13 @@ import { motion } from "framer-motion";
 const Navbar = () => {
   const links = [
     {
+      link: "HOME",
+    },
+    {
       link: "ABOUT ME",
     },
     {
-      link: "MY SERVICES",
-    },
-    {
-      link: "MY WORKS",
+      link: "PROJECTS",
     },
   ];
 

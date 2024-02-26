@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
-import "./home.css";
 import { Parallax } from "react-parallax";
-import bg from "../../assets/bg2.jpg";
+import bg from "../assets/bg2.jpg";
 import { TbArrowBadgeDown } from "react-icons/tb";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
-import Carousel2 from "../../components/Carousel2";
-import sign from "../../assets/sign.png";
+import Carousel2 from "../components/Carousel2";
+import sign from "../assets/sign.png";
 import { SiCampaignmonitor } from "react-icons/si";
 import { IoDocumentAttach } from "react-icons/io5";
 import { FaArrowAltCircleRight } from "react-icons/fa";
@@ -18,6 +17,16 @@ const Home = () => {
     if (dashboardSection) {
       dashboardSection.scrollIntoView({ behavior: "smooth" });
     }
+  };
+
+  const onButtonClick = () => {
+    const pdfUrl = "src/assets/CV/Kavinda_Medagoda.pdf";
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "Kavinda_Medagoda.pdf"; // specify the filename
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -208,6 +217,7 @@ const Home = () => {
               <p className="opacity-50 lg:text-left text-center">MY CV</p>
               <Link>
                 <motion.h2
+                  onClick={onButtonClick}
                   animate={{ x: 0 }}
                   initial={{ x: 20 }}
                   transition={{
@@ -230,22 +240,22 @@ const Home = () => {
             className="bg-[#1C1C1C] w-full lg:w-8/12 rounded-lg bg-opacity-50 hover:bg-opacity-40 flex flex-col justify-between py-7 items-start"
           >
             <div className="lg:flex justify-evenly w-full">
-              <div className="flex gap-5 justify-evenly w-full py-3">
+              <div className="flex gap-5 justify-evenly w-full py-5 lg:py-0">
                 <Link>
-                  <FaGithub className="mx-auto text-5xl opacity-80 hover:text-[#8D7AFF] duration-300" />
+                  <FaGithub className="mx-auto text-5xl opacity-80  hover:scale-110 hover:text-[#8D7AFF] duration-300" />
                 </Link>
                 <Link>
-                  <FaInstagram className="mx-auto text-5xl opacity-80 hover:text-[#8D7AFF] duration-300" />
+                  <FaInstagram className="mx-auto text-5xl opacity-80  hover:scale-110 hover:text-[#8D7AFF] duration-300" />
                 </Link>
               </div>
-              <div className="flex gap-5 justify-evenly w-full py-3 ">
+              <div className="flex gap-5 justify-evenly w-full py-5 lg:py-0">
                 <Link>
-                  <FaYoutube className="mx-auto text-5xl opacity-80 hover:text-[#8D7AFF] duration-300" />
+                  <FaYoutube className="mx-auto text-5xl opacity-80  hover:scale-110 hover:text-[#8D7AFF] duration-300" />
                 </Link>
                 <Link>
                   <FaLinkedin
                     mentAttach
-                    className="mx-auto text-5xl opacity-80 hover:text-[#8D7AFF] duration-300"
+                    className="mx-auto text-5xl opacity-80  hover:scale-110 hover:text-[#8D7AFF] duration-300"
                   />
                 </Link>
               </div>
