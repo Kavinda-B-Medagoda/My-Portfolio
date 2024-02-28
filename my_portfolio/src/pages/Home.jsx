@@ -20,7 +20,7 @@ const Home = () => {
   };
 
   const onButtonClick = () => {
-    const pdfUrl = "src/assets/CV/Kavinda_Medagoda.pdf";
+    const pdfUrl = "public/Kavinda_Medagoda.pdf";
     const link = document.createElement("a");
     link.href = pdfUrl;
     link.download = "Kavinda_Medagoda.pdf"; // specify the filename
