@@ -48,7 +48,7 @@ const Home = () => {
           <h1
             data-aos="fade-down"
             data-aos-delay="100"
-            className="lg:text-7xl text-[#8D7AFF] font-bold mb-5 text-4xl shadow-2xl"
+            className="lg:text-7xl text-[#8D7AFF] font-bold mb-5 cursor-pointer text-4xl shadow-lg"
           >
             Kavinda Medagoda
           </h1>
@@ -157,7 +157,7 @@ const Home = () => {
                   <p className="opacity-50 lg:text-left text-center">
                     MORE ABOUT ME
                   </p>
-                  <Link>
+                  <Link to={"/gallery"}>
                     <motion.h2
                       animate={{ x: 0 }}
                       initial={{ x: 20 }}
@@ -185,7 +185,7 @@ const Home = () => {
                   <p className="opacity-50 lg:text-left text-center">
                     SHOWCASE
                   </p>
-                  <Link>
+                  <Link to={"/projects"}>
                     <motion.h2
                       animate={{ x: 0 }}
                       initial={{ x: 20 }}
@@ -241,18 +241,32 @@ const Home = () => {
           >
             <div className="lg:flex justify-evenly w-full">
               <div className="flex gap-5 justify-evenly w-full py-5 lg:py-0">
-                <Link>
+                <Link
+                  to={"https://github.com/Kavinda-B-Medagoda"}
+                  target="_blank"
+                >
                   <FaGithub className="mx-auto text-5xl opacity-80  hover:scale-110 hover:text-[#8D7AFF] duration-300" />
                 </Link>
-                <Link>
+                <Link
+                  to={"https://www.instagram.com/kavinda_b_medagoda/"}
+                  target="_blank"
+                >
                   <FaInstagram className="mx-auto text-5xl opacity-80  hover:scale-110 hover:text-[#8D7AFF] duration-300" />
                 </Link>
               </div>
               <div className="flex gap-5 justify-evenly w-full py-5 lg:py-0">
-                <Link>
+                <Link
+                  to={
+                    "https://www.youtube.com/channel/UCr1BMdxR-WYAq6TGwgWiL1w"
+                  }
+                  target="_blank"
+                >
                   <FaYoutube className="mx-auto text-5xl opacity-80  hover:scale-110 hover:text-[#8D7AFF] duration-300" />
                 </Link>
-                <Link>
+                <Link
+                  to={"https://www.linkedin.com/in/kavinda-medagoda-01b065231/"}
+                  target="_blank"
+                >
                   <FaLinkedin
                     mentAttach
                     className="mx-auto text-5xl opacity-80  hover:scale-110 hover:text-[#8D7AFF] duration-300"
@@ -264,7 +278,7 @@ const Home = () => {
               <p className="opacity-50 lg:text-left text-center">
                 SOCIAL MEDIA
               </p>
-              <Link>
+              <Link to={"/contact"}>
                 <motion.h2
                   animate={{ x: 0 }}
                   initial={{ x: 20 }}
@@ -290,7 +304,7 @@ const Home = () => {
             <FaArrowAltCircleRight className="mx-auto text-7xl opacity-80" />
             <div className="lg:pl-5 mx-auto lg:mx-0 pt-5">
               <p className="opacity-50 lg:text-left text-center">ABOUT ME</p>
-              <Link>
+              <Link to={"about"}>
                 <motion.h2
                   animate={{ x: 0 }}
                   initial={{ x: 20 }}

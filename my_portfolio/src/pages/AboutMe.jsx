@@ -30,7 +30,7 @@ function AboutMe() {
   };
 
   return (
-    <div className="max-w-[1920px] w-full mx-auto lg:h-screen bg-black text-white py-5 lg:pt-24 lg:px-[10%] lg:flex gap-5 flex-col px-10">
+    <div className="max-w-[1920px] w-full mx-auto lg:h-screen bg-black text-white py-5 pt-24 lg:px-[10%] lg:flex gap-5 flex-col px-10">
       <div className="lg:flex gap-5 h-4/6 w-full lg:w-10/12 mx-auto">
         <div
           className="bg-[#8D7AFF] bg-opacity-50 hover:bg-opacity-40 lg:w-1/3 rounded-lg duration-200 mb-5 lg:mb-0"
@@ -173,28 +173,40 @@ function AboutMe() {
         >
           <div className="lg:flex justify-evenly w-full">
             <div className="flex gap-5 justify-evenly w-full py-5 lg:py-0">
-              <Link>
-                <FaGithub className="mx-auto text-5xl opacity-80 hover:text-[#8D7AFF] hover:scale-110 duration-300" />
+              <Link
+                to={"https://github.com/Kavinda-B-Medagoda"}
+                target="_blank"
+              >
+                <FaGithub className="mx-auto text-5xl opacity-80  hover:scale-110 hover:text-[#8D7AFF] duration-300" />
               </Link>
-              <Link>
-                <FaInstagram className="mx-auto text-5xl opacity-80 hover:text-[#8D7AFF]  hover:scale-110 duration-300" />
+              <Link
+                to={"https://www.instagram.com/kavinda_b_medagoda/"}
+                target="_blank"
+              >
+                <FaInstagram className="mx-auto text-5xl opacity-80  hover:scale-110 hover:text-[#8D7AFF] duration-300" />
               </Link>
             </div>
             <div className="flex gap-5 justify-evenly w-full py-5 lg:py-0">
-              <Link>
-                <FaYoutube className="mx-auto text-5xl opacity-80 hover:text-[#8D7AFF]  hover:scale-110 duration-300" />
+              <Link
+                to={"https://www.youtube.com/channel/UCr1BMdxR-WYAq6TGwgWiL1w"}
+                target="_blank"
+              >
+                <FaYoutube className="mx-auto text-5xl opacity-80  hover:scale-110 hover:text-[#8D7AFF] duration-300" />
               </Link>
-              <Link>
+              <Link
+                to={"https://www.linkedin.com/in/kavinda-medagoda-01b065231/"}
+                target="_blank"
+              >
                 <FaLinkedin
                   mentAttach
-                  className="mx-auto text-5xl  hover:scale-110 opacity-80 hover:text-[#8D7AFF] duration-300"
+                  className="mx-auto text-5xl opacity-80  hover:scale-110 hover:text-[#8D7AFF] duration-300"
                 />
               </Link>
             </div>
           </div>
           <div className="lg:pl-5 mx-auto lg:mx-0 pt-5">
             <p className="opacity-50 lg:text-left text-center">SOCIAL MEDIA</p>
-            <Link>
+            <Link to={"/contact"}>
               <motion.h2
                 animate={{ x: 0 }}
                 initial={{ x: 20 }}
@@ -219,8 +231,8 @@ function AboutMe() {
         >
           <FaArrowAltCircleRight className="mx-auto text-7xl opacity-80" />
           <div className="lg:pl-5 mx-auto lg:mx-0 pt-5">
-            <p className="opacity-50 lg:text-left text-center">ABOUT ME</p>
-            <Link>
+            <p className="opacity-50 lg:text-left text-center">CONTACT ME</p>
+            <Link to={"/contact"}>
               <motion.h2
                 animate={{ x: 0 }}
                 initial={{ x: 20 }}
